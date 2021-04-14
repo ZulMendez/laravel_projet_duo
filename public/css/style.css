@@ -1009,7 +1009,7 @@ blockquote {
 ================================================== */
 .hero {
   background: url(../img/main-pic.jpg) center no-repeat;
-  height: 100%;
+  height: 900px;
   width: 100%;
   display: table;
   position: relative;
@@ -1722,7 +1722,7 @@ a.post-title:hover,
   max-width: 40%;
   float: left;
   padding-right: 30px;
-  display: inline-block;
+  display: block;
 }
 
 .post-content .section-text {

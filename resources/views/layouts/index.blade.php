@@ -37,11 +37,11 @@
     <link rel="stylesheet" href={{asset('css/app.css')}}>
 </head>
 <body>
-    <section class="">
+    @include('partial.nav')
+    <section>
         @yield('content')
     </section>
-
-
+    @include('partial.footer')
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
