@@ -10,19 +10,21 @@
         </div>
         <div class="container-fluid">
             <div class="row" id="grid">
+                @foreach ($portfolio as $card)
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="assets/img/portfolio-1.jpg" alt="" class="img-carousel">
+                        <img src={{$card->image}} alt="" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
-                                <h3>Business Perfect item</h3>
+                                <h3>{{$card->titre}}</h3>
                             </div><!-- /.portfolio-info-top -->
                             <div class="portfolio-info-bottom">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra dolor eu nunc porttitor sollicitudin. Maecenas dignissim ultricies pharetra.</p>
+                                <p>{{$card->description}}</p>
                             </div><!-- /.portfolio-info-bottom -->
                         </div><!-- /.portfolio-info  -->
                     </a>
                 </div><!-- /.col-lg-fifth  -->
+                @endforeach
             </div>
         </div>
     </section>
