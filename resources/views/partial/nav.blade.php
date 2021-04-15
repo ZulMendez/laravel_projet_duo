@@ -23,6 +23,9 @@
                     <li>
                         <a href="{{route('contact')}}">Contact</a>
                     </li> 
+                    <li>
+                        <a href="{{route('admin')}}">Admin</a>
+                    </li> 
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
             

@@ -11,4 +11,16 @@ class BlogController extends Controller
         $blog = Article::all();
         return view('pages/blog', compact('blog'));
     }
+    public function create(){
+        return view('backOffice/Blog/formBlog');
+    }
+    public function store(Request $request){
+        $article = new Article();
+        $article->titre = $request->titre;
+        $article->image = $request->image;
+        $article->description = $request->description;
+        $article->save();
+
+        return redirect()->route('home');
+    }
 }
