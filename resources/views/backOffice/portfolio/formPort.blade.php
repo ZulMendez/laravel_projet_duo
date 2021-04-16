@@ -1,22 +1,29 @@
-@extends('layouts.index')
+@extends('layouts.back')
 
 @section('content')
-    <h1>Portfolio</h1>
-    <form method="POST" action={{route('cards.store')}}>
-        @csrf
-        <label for="titre">Titre</label>
-        <input type="text" name="titre">
 
-        <hr>
+<main id="main" class="site-main">
+    <section class="site-section-small section-blog">
+        <div class="container">
+            <h1>Portfolio</h1>
+            <form method="POST" action={{route('cards.store')}}>
+                @csrf
+                <label for="titre">Titre</label>
+                <input type="text" name="titre">
 
-        <label for="image">Image</label>
-        <input type="text" name="image">
+                <hr>
 
-        <hr>
+                <label for="image">Image</label>
+                <input type="text" name="image">
 
-        <label for="description">Description</label>
-        <input type="text" name="description">
+                <hr>
 
-        <button type="submit">Submit</button>
-    </form>
+                <label for="description">Description</label>
+                <input type="text" name="description">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
 @endsection

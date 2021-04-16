@@ -9,10 +9,10 @@ class PortfolioController extends Controller
 {
     public function index(){
         $portfolio = Projet::all();
-        return view('pages/portfolio', compact('portfolio'));
+        return view('backOffice.portfolio.cards', compact('portfolio'));
     }
     public function create(){
-        return view('backOffice/Portfolio/formPort');
+        return view('backOffice/portfolio/formPort');
     }
     public function store(Request $request){
         $card = new Projet();
@@ -21,6 +21,11 @@ class PortfolioController extends Controller
         $card->description = $request->description;
         $card->save();
 
-        return redirect()->route('home');
+        return redirect()->route('cards.index');
+    }
+    public function destroy(Projet $id){
+        // dd($id);
+        $id->delete();
+        return redirect()->back();
     }
 }

@@ -9,10 +9,10 @@ class BlogController extends Controller
 {
     public function index(){
         $blog = Article::all();
-        return view('pages/blog', compact('blog'));
+        return view('backOffice.blog.articles', compact('blog'));
     }
     public function create(){
-        return view('backOffice/Blog/formBlog');
+        return view('backOffice.blog.formBlog');
     }
     public function store(Request $request){
         $article = new Article();
@@ -21,6 +21,11 @@ class BlogController extends Controller
         $article->description = $request->description;
         $article->save();
 
-        return redirect()->route('home');
+        return redirect()->route('articles.index');
+    }
+    public function destroy(Article $id){
+        // dd($id);
+        $id->delete();
+        return redirect()->back();
     }
 }
