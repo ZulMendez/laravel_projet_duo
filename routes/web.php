@@ -41,6 +41,12 @@ Route::get('/backOffice/article/create', [BlogController::class, 'create'])->nam
 Route::post('/backOffice/article/store', [BlogController::class, 'store'])->name('articles.store');
 // delete
 Route::delete('/backOffice/article/{id}/delete', [BlogController::class, 'destroy'])->name('articles.destroy');
+// show
+Route::get('/backOffice/article/{id}', [BlogController::class, 'show'])->name('articles.show');
+// edit || update
+Route::get('/backOffice/article/{id}/edit', [BlogController::class, 'edit'])->name('articles.edit');
+Route::put('/backOffice/article/{id}/update', [BlogController::class, 'update'])->name('articles.update');
+
 
 //Portfolio
 // read
@@ -51,6 +57,11 @@ Route::get('/backOffice/card/create', [PortfolioController::class, 'create'])->n
 Route::post('/backOffice/card/store', [PortfolioController::class, 'store'])->name('cards.store');
 // delete
 Route::delete('/backOffice/card/{id}/delete', [PortfolioController::class, 'destroy'])->name('cards.destroy');
+// show
+Route::get('/backOffice/card/{id}', [BlogController::class, 'show'])->name('cards.show');
+// edit || update
+Route::get('/backOffice/card/{id}/edit', [BlogController::class, 'edit'])->name('cards.edit');
+Route::put('/backOffice/card/{id}/update', [BlogController::class, 'update'])->name('cards.update');
 
 
 

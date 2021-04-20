@@ -28,4 +28,20 @@ class BlogController extends Controller
         $id->delete();
         return redirect()->back();
     }
+    public function show(Article $id){
+        $article = $id;
+        return view('backOffice.blog.showArticle', compact('article'));
+    }
+    public function edit(Article $id){
+        $article = $id;
+        return view('backOffice.blog.editArticle', compact('article'));
+    }
+    public function update(Article $id, Request $request){
+        $article = $id;
+        $article->titre = $request->titre;
+        $article->image = $request->image;
+        $article->description = $request->description;
+        $article->save();
+        return redirect('/backOffice/article/' . $article->id);
+    }
 }

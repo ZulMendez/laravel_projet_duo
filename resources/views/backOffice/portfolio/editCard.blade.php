@@ -5,21 +5,22 @@
 <main id="" class="">
     <section class="">
         <div class="container">
-            <h1>Portfolio</h1>
-            <form method="POST" action={{route('cards.store')}}>
+            <h1>Editer formulaire portfolio</h1>
+            <form class="" method="POST" action={{route('cards.update', $card->id)}}>
                 @csrf
+                @method('PUT')
                 <label for="titre">Titre</label>
-                <input type="text" name="titre">
+                <input value={{$card->titre}} type="text" name="titre">
 
                 <hr>
 
                 <label for="image">Image</label>
-                <input type="text" name="image">
+                <input value={{$card->image}} type="text" name="image">
 
                 <hr>
 
                 <label for="description">Description</label>
-                <input type="text" name="description">
+                <input value={{$card->description}} type="text" name="description">
 
                 <button type="submit">Submit</button>
             </form>

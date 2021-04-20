@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <meta name="description" content="BusinessPerfect - Freebie HTML/CSS template based on Bootstrap">
+    <meta name="author" content="Milan Savov">
+    <meta name="keywords" content="html, css, twitter bootstrap, javascript, jquery, responsive">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -28,9 +37,9 @@
     <link rel="stylesheet" href={{asset('css/app.css')}}>
 </head>
 <body>
+<section class="container">
     @yield('content')
-
-
+</section>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
     <script src={{asset('js/bootstrap.min.js')}}></script>

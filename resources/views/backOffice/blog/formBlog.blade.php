@@ -2,11 +2,11 @@
 
 @section('content')
 
-<main id="main" class="site-main">
-    <section class="site-section-small section-blog">
+<main id="" class="">
+    <section class="">
         <div class="container">
             <h1>Blog</h1>
-            <form method="POST" action={{route('articles.store')}}>
+            <form class="" method="POST" action={{route('articles.store')}}>
                 @csrf
                 <label for="titre">Titre</label>
                 <input type="text" name="titre">
