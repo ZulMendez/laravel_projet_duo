@@ -29,6 +29,7 @@ class PortfolioController extends Controller
         return redirect()->back();
     }
     public function show(Projet $id){
+        // dd('$id');
         $card = $id;
         return view('backOffice.portfolio.showCard', compact('card'));
     }

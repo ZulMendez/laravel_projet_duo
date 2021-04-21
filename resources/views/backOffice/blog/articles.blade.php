@@ -1,17 +1,17 @@
 @extends('layouts.back')
 
 @section('content')
-    <div class="container my-5 bg-secondary">
+    <div class="container my-5">
         <h1 class="text-center">Page Home Blog</h1>
         <h4 class="text-center my-2">Liste articles</h4>
-        <div class="d-flex justify-content-center my-2">
-            <a href={{route('articles.create')}}>Ajouter un article</a>
-            <a href={{route('admin')}}>Retour backoffice</a>
+        <div class="d-flex justify-content-around my-2">
+            <a class="btn btn-outline-primary" href={{route('articles.create')}}>Ajouter un article</a>
+            <a class="btn btn-outline-secondary" href={{route('admin')}}>Retour backoffice</a>
         </div>
         <div class="container">
             <div class="row">
                 @foreach ($blog as $article)
-                <div class="col-6 border rounded my-3 p-3">
+                <div class="col-6 text-center border rounded my-3 p-3">
                     <p><span class="font-weight-bold">Numéro article: </span>
                     {{$article->id}}</p>
     
@@ -21,7 +21,7 @@
                     <p><span class="font-weight-bold">Image: </span>
                     {{$article->image}}</p>
     
-                    <p class="text-justify"><span class="font-weight-bold">Description: </span>
+                    <p><span class="font-weight-bold">Description: </span>
                     {{$article->description}}</p>
 
                     <a href="{{route('articles.show', $article->id)}}" class="btn btn-primary">DETAILS</a>

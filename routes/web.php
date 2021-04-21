@@ -58,10 +58,10 @@ Route::post('/backOffice/card/store', [PortfolioController::class, 'store'])->na
 // delete
 Route::delete('/backOffice/card/{id}/delete', [PortfolioController::class, 'destroy'])->name('cards.destroy');
 // show
-Route::get('/backOffice/card/{id}', [BlogController::class, 'show'])->name('cards.show');
+Route::get('/backOffice/card/{id}', [PortfolioController::class, 'show'])->name('cards.show');
 // edit || update
-Route::get('/backOffice/card/{id}/edit', [BlogController::class, 'edit'])->name('cards.edit');
-Route::put('/backOffice/card/{id}/update', [BlogController::class, 'update'])->name('cards.update');
+Route::get('/backOffice/card/{id}/edit', [PortfolioController::class, 'edit'])->name('cards.edit');
+Route::put('/backOffice/card/{id}/update', [PortfolioController::class, 'update'])->name('cards.update');
 
 
 
